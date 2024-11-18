@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <title>Fictional App</title>
+</head>
+
+<body class="bg-accent first-letter:font-sans">
+    <header class="bg-accent shadow-md sticky top-0 z-10">
+        <div class="home-container mx-auto flex justify-between gap-6 items-center p-4 text-cream">
+            <a href="#" class="text-2xl font-bold flex-grow">FictionalApp</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#features" class="">Features</a>
+                <a href="#about" class="">About</a>
+                <a href="#contact" class="">Contact</a>
+                <button class="bg-cream text-brown shadow" onclick="onClick()">
+                    Get Started
+                </button>
+            </nav>
+
+            <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden p-0">
+                <img src="public/burger-menu.svg" alt="burger menu" width="32">
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu"
+            class="hidden absolute right-0 px-6 py-4 flex-col gap-4 rounded-bl-lg text-lg text-brown bg-cream shadow-md md:hidden">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <hr class="h-px bg-secondary border-0" />
+            <button onclick="onClick()" class="bg-accent text-cream">
+                Get Started
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="bg-primary text-brown py-12 lg:py-20 text-center">
+            <div class="home-container">
+                <h1 class="text-4xl md:text-6xl font-bold">Welcome to FictionalApp</h1>
+                <p class="mt-4 text-lg md:text-xl lg:text-2xl">The ultimate solution for your productivity needs.</p>
+                <img src="public/hero.jpg" alt="App preview"
+                    class="mx-auto mt-8 rounded-md shadow-lg max-w-[600px] max-h-[400px] w-full h-full" />
+            </div>
+        </section>
+        <section id="features" class="py-12 lg:py-20 bg-cream text-brown">
+            <div class="home-container">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 lg:mb-12 text-center">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
+                    <div class="feature-card">
+                        <h3>Feature 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="feature-card !bg-primary">
+                        <h3>Feature 2</h3>
+                        <p>Amet, consectetur adipiscing elit, sed do.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Feature 3</h3>
+                        <p>Elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact" class="bg-accent text-cream py-8 lg:py-10">
+        <div class="home-container grid grid-cols-1 gap-y-6 md:grid-cols-3 justify-items-center items-center">
+            <div class="text-center md:text-left">
+                <a href="#" class="text-xl font-bold">FictionalApp</a>
+                <p class="mt-2">© 2024 FictionalApp. All rights reserved.</p>
+            </div>
+            <nav class="flex gap-4">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="flex gap-4">
+                <a class="social-media-link" href="#" aria-label="Facebook">
+                    <p class="hidden lg:block">Facebook</p>
+                    <img src="public/facebook.svg" alt="Facebook">
+                </a>
+                <a class="social-media-link" href="#" aria-label="Twitter">
+                    <p class="hidden lg:block">Twitter</p>
+                    <img src="public/twitter.svg" alt="Twitter">
+                </a>
+                <a class="social-media-link" href="#" aria-label="Instagram">
+                    <p class="hidden lg:block">Instagram</p>
+                    <img src="public/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js">
+    </script>
+</body>
+
+</html>

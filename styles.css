@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(public/fonts/Roboto/Roboto-Regular.ttf) format("ttf");
+  }
+}
+
+button {
+  @apply px-4 py-2 rounded-md font-semibold;
+}
+
+.home-container {
+  @apply mx-auto max-w-[1440px] px-6 md:px-8 lg:px-12 xl:px-16;
+}
+
+.feature-card {
+  @apply bg-cream-300 p-6 lg:px-10 rounded-lg shadow [&>h3]:text-xl lg:[&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mb-2 [&>p]:font-roboto lg:[&>p]:text-lg;
+}
+
+.social-media-link {
+  @apply flex items-center gap-2;
+}
+
